@@ -5,9 +5,9 @@ class Author {
     private string $_firstname;
     private array $_books;
 
-    public function __construct(string $lastname, string $firstname) {
-        $this->_lastname = $lastname;
+    public function __construct(string $firstname, string $lastname) {
         $this->_firstname = $firstname;
+        $this->_lastname = $lastname;
         
         $this->_books = []; 
     }
@@ -29,26 +29,27 @@ class Author {
     }
 
     public function getNomComplet() {
-        return $this->_lastname." ".$this->_firstname;
-    }
-
-    public function getLastname() {
-        return $this->_lastname;
+        return $this->_firstname." ".$this->_lastname;
     }
 
     public function getFirstName() {
         return $this->_firstname;
     }
 
+    public function getLastname() {
+        return $this->_lastname;
+    } 
+
     public function getBooks() {
         return $this->_books;
+    }
+
+    public function setFirstname($firstname) {
+        $this->_firstname = $firstname;
     }
 
     public function setLastname($lastname) {
         $this->_lastname = $lastname;
     }
 
-    public function setFirstname($firstname) {
-        $this->_firstname = $firstname;
-    }
 }
