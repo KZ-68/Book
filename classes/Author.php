@@ -1,8 +1,8 @@
 <?php
 
 class Author {
-    private string $_lastname;
     private string $_firstname;
+    private string $_lastname;
     private array $_books;
 
     public function __construct(string $firstname, string $lastname) {
